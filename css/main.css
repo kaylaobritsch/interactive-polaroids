@@ -17,7 +17,9 @@ main {
   border-radius: 4px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
 
-  position: relative;
+  position: absolute;
+
+  transition: box-shadow .3s linear;
 }
 
 .polaroid > img {
@@ -35,13 +37,20 @@ main {
   transform: translateX(-50%);
 }
 
+.polaroid:hover {
+  transform: rotate(0deg);
+  z-index: 5;
+
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, .5);
+}
+
 figure:nth-child(1) {
   transform: rotate(-15deg);
   z-index: -1;
 
   position: absolute;
-  top: 5rem;
-  left: 9rem;
+  top: 6rem;
+  left: 13rem;
 }
 
 figure:nth-child(2) {
@@ -49,22 +58,15 @@ figure:nth-child(2) {
   z-index: 2;
 
   position: absolute;
-  top: 8rem;
-  left: 15rem;
+  top: 9rem;
+  left: 18rem;
 }
 
 figure:nth-child(3) {
-  transform: rotate(25deg);
+  transform: rotate(30deg);
   z-index: 1;
 
   position: absolute;
-  top: 5rem;
-  left: 20rem;
-}
-
-figure:hover:nth-child(1),
-figure:hover:nth-child(2),
-figure:hover:nth-child(3) {
-  transform: rotate(0deg);
-  z-index: 5;
+  top: 6rem;
+  left: 24rem;
 }
